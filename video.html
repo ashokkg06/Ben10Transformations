@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <video controls>
+    <source src="" type="video/mp4" id="videoSource">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // Retrieve the video link from localStorage
+    const videoLink = localStorage.getItem('currentVideoLink');
+    if (videoLink) {
+      // Set the video source based on the retrieved link
+      document.getElementById('videoSource').setAttribute('src', videoLink);
+    }
+  </script>
+</body>
+</html>
